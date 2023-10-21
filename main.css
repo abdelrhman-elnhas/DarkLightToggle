@@ -1,0 +1,137 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  direction: rtl;
+}
+
+section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.backg-light {
+  background-color: #fffcdf;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+}
+
+.backg-dark {
+  background-color: #040027;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+}
+
+.toggle {
+  content: "";
+  width: 380px;
+  height: 180px;
+  border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -o-border-radius: 100px;
+  padding: 5px 10px;
+  position: relative;
+}
+
+.toggle-light {
+  border: 2px solid #ffd00f;
+  box-shadow: 0px 0px 10px #ffd000;
+}
+
+.toggle-dark {
+  border-color: #eee;
+  box-shadow: 0px 0px 10px #eee;
+}
+
+.sun,
+.moon {
+  position: absolute;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  top: 20px;
+  cursor: pointer;
+  font-size: 130px;
+}
+
+.sun {
+  left: 30px;
+  color: #ffd000;
+}
+
+.moon {
+  right: 130px;
+  color: #eee;
+  opacity: 0;
+}
+
+@keyframes sunSet {
+  0% {
+    opacity: 1;
+    left: 30px;
+    display: block;
+  }
+  100% {
+    opacity: 0;
+    left: 110px;
+    display: none;
+  }
+}
+
+@keyframes moonRise {
+  0% {
+    opacity: 0;
+    right: 130px;
+    display: unset;
+  }
+  100% {
+    opacity: 1;
+    right: 30px;
+    display: block !important;
+  }
+}
+
+@keyframes sunRise {
+  0% {
+    opacity: 0;
+    left: 130px;
+    display: none;
+  }
+  100% {
+    opacity: 1;
+    left: 30px;
+    display: block;
+  }
+}
+
+@keyframes moonSet {
+  0% {
+    opacity: 1;
+    right: 30px;
+    display: block !important;
+  }
+  100% {
+    opacity: 0;
+    right: 130px;
+    display: none !important;
+  }
+}
+
+p {
+  text-align: center;
+}
